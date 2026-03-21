@@ -77,7 +77,8 @@ export default function HomePage() {
       </header>
 
       {/* HERO (Service Selection - Better than Search) */}
-      <section className="bg-gray-100 py-16 text-center">
+      <section className="bg-gray-100 py-20 text-center">
+        <div className="max-w-7xl mx-auto px-6">
         <h1 className="text-3xl md:text-5xl font-bold">
           Complete Home Services for Your Family
         </h1>
@@ -99,14 +100,15 @@ export default function HomePage() {
         </div>
 
         {/* CTA Buttons */}
-        <div className="mt-8 flex justify-center gap-4">
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg">
+        <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg w-full sm:w-auto">
             📞 Call Now
           </button>
-          <button className="bg-green-600 text-white px-6 py-3 rounded-lg">
+          <button className="bg-green-600 text-white px-6 py-3 rounded-lg w-full sm:w-auto">
             💬 WhatsApp
           </button>
         </div>
+      </div>
       </section>
 
       {/* SERVICES (Uber style cards) */}
@@ -115,7 +117,7 @@ export default function HomePage() {
           Services for You
         </h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 px-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-7xl mx-auto px-6">
           {services.map((s, i) => (
             <motion.div
               key={i}
@@ -138,7 +140,7 @@ export default function HomePage() {
           Real projects completed for families across Chennai
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto px-6">
           {works.map((w, i) => (
             <motion.div
               key={i}
@@ -177,7 +179,7 @@ export default function HomePage() {
           Why Choose Us
         </h2>
 
-        <div className="grid md:grid-cols-4 gap-6 px-6 text-center">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto px-6 text-center">
           {[
             "Affordable",
             "Trusted Workers",
@@ -197,7 +199,7 @@ export default function HomePage() {
           What Our Customers Say
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-6 px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-6">
           {testimonials.map((t, i) => (
             <motion.div
               key={i}
