@@ -12,8 +12,6 @@ return(
 
 <div className="container mx-auto flex justify-between items-center p-4">
 
-<h1 className="text-2xl font-bold">LuxuryHomes</h1>
-
 <div className="hidden md:flex gap-6">
 
 <Link to="/">Home</Link>
