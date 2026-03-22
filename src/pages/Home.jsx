@@ -77,36 +77,42 @@ export default function HomePage() {
   return (
     <div className="font-sans text-gray-900 bg-white">
       {/* NAVBAR */}
-     <header className="flex items-center justify-between px-6 py-4 shadow-sm sticky top-0 bg-white z-50">
-  
-  {/* ✅ LEFT SIDE: LOGO + TEXT */}
-  <div className="flex items-center gap-3">
-    <img
-      src="/images/logo.png"
-      alt="RK Infrastructure Logo"
-      className="w-10 h-10 object-contain rounded"
-      onError={(e) =>
-        (e.target.src = "https://via.placeholder.com/40")
-      }
-    />
+    <header className="flex items-center justify-between px-6 md:px-10 py-4 shadow-sm sticky top-0 bg-white z-50">
 
-    <div>
-      <h1 className="font-bold text-lg">RK Infrastructure</h1>
-      <p className="text-xs text-gray-500">
-        Radha Krishna Infrastructure
-      </p>
-    </div>
-  </div>
+        {/* LEFT: LOGO + BRAND */}
+        <div className="flex items-center gap-4">
+            
+            {/* LOGO */}
+            <img
+            src="/images/log.png"
+            alt="RK Infrastructure Logo"
+            className="w-14 h-14 md:w-16 md:h-16 object-contain rounded-lg shadow-md border"
+            onError={(e) =>
+                (e.target.src = "https://via.placeholder.com/80")
+            }
+            />
 
-  {/* ✅ RIGHT SIDE BUTTON */}
-  <button
-    onClick={() => setShowContact(true)}
-    className="bg-blue-600 text-white px-4 py-2 rounded-lg"
-  >
-    Contact Us
-  </button>
+            {/* BRAND TEXT */}
+            <div className="leading-tight">
+            <h1 className="text-lg md:text-xl font-bold text-gray-900">
+                RK Infrastructure
+            </h1>
+            <p className="text-xs md:text-sm text-gray-500">
+                Construction • Interior • Plumbing
+            </p>
+            </div>
 
-</header>
+        </div>
+
+        {/* RIGHT SIDE CTA */}
+        <button
+            onClick={() => setShowContact(true)}
+            className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl text-sm md:text-base font-medium shadow-md transition"
+        >
+            Contact Us
+        </button>
+
+        </header>
       {/* HERO */}
       <section className="bg-gray-100 py-20 text-center">
         <h1 className="text-3xl md:text-5xl font-bold">
