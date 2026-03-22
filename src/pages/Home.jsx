@@ -77,16 +77,36 @@ export default function HomePage() {
   return (
     <div className="font-sans text-gray-900 bg-white">
       {/* NAVBAR */}
-      <header className="flex items-center justify-between px-6 py-4 shadow-sm sticky top-0 bg-white z-50">
-        <h1 className="font-bold text-lg">RK Infrastructure</h1>
-        <button
-          onClick={() => setShowContact(true)}
-          className="bg-blue-600 text-white px-4 py-2 rounded-lg"
-        >
-          Contact Us
-        </button>
-      </header>
+     <header className="flex items-center justify-between px-6 py-4 shadow-sm sticky top-0 bg-white z-50">
+  
+  {/* ✅ LEFT SIDE: LOGO + TEXT */}
+  <div className="flex items-center gap-3">
+    <img
+      src="/images/logo.png"
+      alt="RK Infrastructure Logo"
+      className="w-10 h-10 object-contain rounded"
+      onError={(e) =>
+        (e.target.src = "https://via.placeholder.com/40")
+      }
+    />
 
+    <div>
+      <h1 className="font-bold text-lg">RK Infrastructure</h1>
+      <p className="text-xs text-gray-500">
+        Radha Krishna Infrastructure
+      </p>
+    </div>
+  </div>
+
+  {/* ✅ RIGHT SIDE BUTTON */}
+  <button
+    onClick={() => setShowContact(true)}
+    className="bg-blue-600 text-white px-4 py-2 rounded-lg"
+  >
+    Contact Us
+  </button>
+
+</header>
       {/* HERO */}
       <section className="bg-gray-100 py-20 text-center">
         <h1 className="text-3xl md:text-5xl font-bold">
