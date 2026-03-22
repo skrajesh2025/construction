@@ -105,37 +105,56 @@ export default function HomePage() {
         </div>
 
         {/* RIGHT SIDE CTA */}
-        <button
+         {/* <button
             onClick={() => setShowContact(true)}
             className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl text-sm md:text-base font-medium shadow-md transition"
         >
             Contact Us
-        </button>
+        </button> */}
 
         </header>
       {/* HERO */}
-      <section className="bg-gray-100 py-20 text-center">
-        <h1 className="text-3xl md:text-5xl font-bold">
-          Complete Home Services
-        </h1>
+        <section className="relative py-24 text-center text-white overflow-hidden">
 
-        <div className="mt-8 flex justify-center gap-4">
-          <button
-            onClick={handleCall}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl text-lg shadow-lg transition"
-          >
-            📞 Call Now
-          </button>
+        {/* 🔹 GRADIENT BACKGROUND */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-700 via-blue-600 to-green-500"></div>
 
-          <button
-            onClick={handleWhatsApp}
-            className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl text-lg shadow-lg transition"
-          >
-            💬 WhatsApp
-          </button>
+        {/* 🔹 SOFT GLOW EFFECT (Premium Touch) */}
+        <div className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-white/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-[-120px] right-[-100px] w-[300px] h-[300px] bg-white/10 rounded-full blur-3xl"></div>
+
+        {/* 🔹 CONTENT */}
+        <div className="relative z-10 max-w-4xl mx-auto px-6">
+            
+            <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+            Complete Home Services for Your Family
+            </h1>
+
+            <p className="mt-4 text-gray-200 text-lg">
+            Construction • Interior • Plumbing • Waterproofing
+            </p>
+
+            {/* 🔹 CTA BUTTONS */}
+            <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+            
+            <button
+                onClick={handleCall}
+                className="bg-white text-blue-700 px-6 py-3 rounded-xl text-lg font-semibold shadow-xl hover:scale-105 transition"
+            >
+                📞 Call Now
+            </button>
+
+            <button
+                onClick={handleWhatsApp}
+                className="bg-black/20 backdrop-blur-md border border-white/30 text-white px-6 py-3 rounded-xl text-lg font-semibold hover:bg-black/30 transition"
+            >
+                💬 WhatsApp
+            </button>
+
+            </div>
+
         </div>
-      </section>
-
+        </section>
       {/* SERVICES */}
      <section className="py-16">
         <h2 className="text-2xl font-bold text-center mb-8">
