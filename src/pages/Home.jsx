@@ -98,52 +98,59 @@ export default function HomePage() {
 
         </header>
       {/* HERO */}
-       <section className="bg-gray-50 py-16 border-b">
+   <section className="bg-blue-50 py-12 md:py-16">
 
-        <div className="max-w-6xl mx-auto px-6 md:px-10">
+  <div className="max-w-5xl mx-auto px-4 md:px-8">
 
-            {/* MAIN HEADING */}
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            Complete Home Services
-            </h2>
+    {/* 🔹 INNER CARD (MAIN CONTENT) */}
+    <div className="bg-white rounded-xl shadow-sm border p-6 md:p-10">
 
-            {/* SUBTEXT */}
-            <p className="mt-3 text-gray-600 text-lg">
-            Construction, Interior, Plumbing & Waterproofing — all in one place.
-            </p>
+      {/* TITLE */}
+      <h2 className="text-2xl md:text-4xl font-bold text-gray-900">
+        Complete Home Services
+      </h2>
 
-            {/* SERVICE TAGS */}
-            <div className="mt-6 flex flex-wrap gap-3">
-            {services.map((s, i) => (
-                <span
-                key={i}
-                className="bg-white border px-4 py-2 rounded-lg text-sm text-gray-700"
-                >
-                {typeof s === "string" ? s : s.name}
-                </span>
-            ))}
-            </div>
+      {/* SUBTEXT */}
+      <p className="mt-3 text-gray-600 text-sm md:text-lg">
+        Construction, Interior, Plumbing & Waterproofing — all in one place.
+      </p>
 
-            {/* CTA */}
-            <div className="mt-8 flex gap-4">
-            <button
-                onClick={handleCall}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-base font-medium"
-            >
-                📞 Call Now
-            </button>
+      {/* SERVICES */}
+      <div className="mt-5 flex gap-2 overflow-x-auto pb-2">
+        {services.map((s, i) => (
+          <span
+            key={i}
+            className="whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md text-xs md:text-sm text-gray-700"
+          >
+            {typeof s === "string" ? s : s.name}
+          </span>
+        ))}
+      </div>
 
-            <button
-                onClick={handleWhatsApp}
-                className="border border-gray-300 px-6 py-3 rounded-lg text-base font-medium hover:bg-gray-100"
-            >
-                WhatsApp
-            </button>
-            </div>
+      {/* CTA */}
+      <div className="mt-6 flex flex-col sm:flex-row gap-3">
+        
+        <button
+          onClick={handleCall}
+          className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-lg text-sm md:text-base font-medium"
+        >
+          📞 Call Now
+        </button>
 
-        </div>
+        <button
+          onClick={handleWhatsApp}
+          className="w-full sm:w-auto border border-gray-300 px-5 py-3 rounded-lg text-sm md:text-base font-medium hover:bg-gray-100"
+        >
+          💬 WhatsApp
+        </button>
 
-        </section>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
       {/* SERVICES */}
      <section className="py-16">
         <h2 className="text-2xl font-bold text-center mb-8">
