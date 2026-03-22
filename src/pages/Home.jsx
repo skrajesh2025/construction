@@ -84,7 +84,7 @@ export default function HomePage() {
             
             {/* LOGO */}
             <img
-            src="/images/log.png"
+            src="/images/logo.png"
             alt="RK Infrastructure Logo"
             className="w-14 h-14 md:w-16 md:h-16 object-contain rounded-lg shadow-md border"
             onError={(e) =>
