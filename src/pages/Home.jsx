@@ -2,14 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const services = [
-  "Construction",
-  "Interior",
-  "Plumbing",
-  "Waterproofing",
-  "Furniture",
-  "Home Plan",
-  "Tiles",
-  "Land",
+  { name: "Construction", icon: "🏗️" },
+  { name: "Interior", icon: "🛋️" },
+  { name: "Plumbing", icon: "🚿" },
+  { name: "Waterproofing", icon: "💧" },
+  { name: "Furniture", icon: "🪑" },
+  { name: "Home Plan", icon: "📐" },
+  { name: "Tiles", icon: "🧱" },
+  { name: "Land", icon: "🌍" },
 ];
 
 const works = [
@@ -131,21 +131,25 @@ export default function HomePage() {
       </section>
 
       {/* SERVICES */}
-      <section className="py-16">
+     <section className="py-16">
         <h2 className="text-2xl font-bold text-center mb-8">
-          Services for You
+            Services for You
         </h2>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 px-6">
-          {services.map((s, i) => (
+            {services.map((s, i) => (
             <motion.div
-              key={i}
-              whileHover={{ scale: 1.05 }}
-              className="bg-gray-100 p-6 rounded-xl text-center shadow"
+                key={i}
+                whileHover={{ scale: 1.05 }}
+                className="bg-white p-6 rounded-2xl text-center shadow hover:shadow-lg transition cursor-pointer"
             >
-              {s}
+                {/* ICON */}
+                <div className="text-4xl mb-3">{s.icon}</div>
+
+                {/* TEXT */}
+                <p className="font-medium">{s.name}</p>
             </motion.div>
-          ))}
+            ))}
         </div>
       </section>
 
