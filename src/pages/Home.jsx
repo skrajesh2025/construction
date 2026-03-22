@@ -81,7 +81,7 @@ export default function HomePage() {
     <header className="bg-white border-b px-6 md:px-10 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
             <img
-            src="/images/log.png"
+            src="/images/logo.png"
             alt="RK Infrastructure"
             className="w-12 h-12 object-contain"
             />
