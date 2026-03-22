@@ -77,83 +77,72 @@ export default function HomePage() {
   return (
     <div className="font-sans text-gray-900 bg-white">
       {/* NAVBAR */}
-    <header className="flex items-center justify-between px-6 md:px-10 py-4 shadow-sm sticky top-0 bg-white z-50">
-
-        {/* LEFT: LOGO + BRAND */}
-        <div className="flex items-center gap-4">
-            
-            {/* LOGO */}
+    
+    <header className="bg-white border-b px-6 md:px-10 py-4 flex items-center justify-between">
+        <div className="flex items-center gap-3">
             <img
-            src="/images/logo.png"
-            alt="RK Infrastructure Logo"
-            className="w-14 h-14 md:w-16 md:h-16 object-contain rounded-lg shadow-md border"
-            onError={(e) =>
-                (e.target.src = "https://via.placeholder.com/80")
-            }
+            src="/images/log.png"
+            alt="RK Infrastructure"
+            className="w-12 h-12 object-contain"
             />
 
-            {/* BRAND TEXT */}
             <div className="leading-tight">
-            <h1 className="text-lg md:text-xl font-bold text-gray-900">
+            <h1 className="text-xl font-bold text-gray-900">
                 RK Infrastructure
             </h1>
-            <p className="text-xs md:text-sm text-gray-500">
-                Construction • Interior • Plumbing
+            <p className="text-sm text-gray-500">
+                Radha Krishna Infrastructure
             </p>
             </div>
-
         </div>
-
-        {/* RIGHT SIDE CTA */}
-         {/* <button
-            onClick={() => setShowContact(true)}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl text-sm md:text-base font-medium shadow-md transition"
-        >
-            Contact Us
-        </button> */}
 
         </header>
       {/* HERO */}
-        <section className="relative py-24 text-center text-white overflow-hidden">
+       <section className="bg-gray-50 py-16 border-b">
 
-        {/* 🔹 GRADIENT BACKGROUND */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-700 via-blue-600 to-green-500"></div>
+        <div className="max-w-6xl mx-auto px-6 md:px-10">
 
-        {/* 🔹 SOFT GLOW EFFECT (Premium Touch) */}
-        <div className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-white/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-[-120px] right-[-100px] w-[300px] h-[300px] bg-white/10 rounded-full blur-3xl"></div>
+            {/* MAIN HEADING */}
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            Complete Home Services
+            </h2>
 
-        {/* 🔹 CONTENT */}
-        <div className="relative z-10 max-w-4xl mx-auto px-6">
-            
-            <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-            Complete Home Services for Your Family
-            </h1>
-
-            <p className="mt-4 text-gray-200 text-lg">
-            Construction • Interior • Plumbing • Waterproofing
+            {/* SUBTEXT */}
+            <p className="mt-3 text-gray-600 text-lg">
+            Construction, Interior, Plumbing & Waterproofing — all in one place.
             </p>
 
-            {/* 🔹 CTA BUTTONS */}
-            <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-            
+            {/* SERVICE TAGS */}
+            <div className="mt-6 flex flex-wrap gap-3">
+            {services.map((s, i) => (
+                <span
+                key={i}
+                className="bg-white border px-4 py-2 rounded-lg text-sm text-gray-700"
+                >
+                {typeof s === "string" ? s : s.name}
+                </span>
+            ))}
+            </div>
+
+            {/* CTA */}
+            <div className="mt-8 flex gap-4">
             <button
                 onClick={handleCall}
-                className="bg-white text-blue-700 px-6 py-3 rounded-xl text-lg font-semibold shadow-xl hover:scale-105 transition"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-base font-medium"
             >
                 📞 Call Now
             </button>
 
             <button
                 onClick={handleWhatsApp}
-                className="bg-black/20 backdrop-blur-md border border-white/30 text-white px-6 py-3 rounded-xl text-lg font-semibold hover:bg-black/30 transition"
+                className="border border-gray-300 px-6 py-3 rounded-lg text-base font-medium hover:bg-gray-100"
             >
-                💬 WhatsApp
+                WhatsApp
             </button>
-
             </div>
 
         </div>
+
         </section>
       {/* SERVICES */}
      <section className="py-16">
